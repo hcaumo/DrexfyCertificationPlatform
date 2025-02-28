@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Light theme colors */
+  --light-bg: #ffffff;
+  --light-bg-secondary: #f8f9fa;
+  --light-text: #1a1a1a;
+  --light-text-secondary: #4a5568;
+  --light-border: #e2e8f0;
+  --light-primary: #3b82f6;
+  --light-primary-hover: #2563eb;
+  --light-card-bg: #ffffff;
+  --light-error: #ef4444;
+
+  /* Dark theme colors */
+  --dark-bg: #0a0a0a;
+  --dark-bg-secondary: #1a1a1a;
+  --dark-text: #f8f9fa;
+  --dark-text-secondary: #a0aec0;
+  --dark-border: #2d3748;
+  --dark-primary: #646cff;
+  --dark-primary-hover: #535bf2;
+  --dark-card-bg: #1a1a1a;
+  --dark-error: #f87171;
+
+  /* Common variables */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Light theme default */
+[data-theme='light'] {
+  --bg-color: var(--light-bg);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-color: var(--light-text);
+  --text-secondary: var(--light-text-secondary);
+  --border-color: var(--light-border);
+  --primary-color: var(--light-primary);
+  --primary-hover: var(--light-primary-hover);
+  --card-bg: var(--light-card-bg);
+  --error-color: var(--light-error);
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --bg-color: var(--dark-bg);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-color: var(--dark-text);
+  --text-secondary: var(--dark-text-secondary);
+  --border-color: var(--dark-border);
+  --primary-color: var(--dark-primary);
+  --primary-hover: var(--dark-primary-hover);
+  --card-bg: var(--dark-card-bg);
+  --error-color: var(--dark-error);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* React Flow Customization */
+.react-flow__node {
+  font-size: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--text-color);
+  transition: all var(--transition-speed);
+}
+
+.react-flow__edge {
+  stroke: var(--primary-color);
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__edge-text {
+  font-size: 12px;
+  fill: var(--text-color);
+}
+
+.react-flow__controls {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.react-flow__controls-button {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+.react-flow__controls-button:hover {
+  background: var(--bg-color);
+}
+
+.react-flow__minimap {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
